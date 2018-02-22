@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/re"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.douyinapp.view.MainActivity">
+    <RelativeLayout
+        android:background="#0E0F1A"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.stx.xhb.xbanner.XBanner
+                    android:id="@+id/showXBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:AutoPlayTime="3000"
+                    app:tipTextColor="#FFFFFFFF"
+                    app:tipTextSize="16.0sp"></com.stx.xhb.xbanner.XBanner>
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/showXRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/showXBanner"
+                    android:layout_marginTop="5dp"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+            </RelativeLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

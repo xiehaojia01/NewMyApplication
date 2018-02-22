@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#161823">
+
+        <RelativeLayout
+            android:id="@+id/aa"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/a"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/talk" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/a"
+                android:id="@+id/relativeLayout">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标题"
+                    android:textColor="#FFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/spans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:text="标签"
+                    android:textColor="#D4D4D4"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/aaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/relativeLayout"
+                android:layout_alignBottom="@+id/relativeLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text=">"
+                android:textColor="#D4D4D4"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/user_count"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/aaa"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/aaa"
+                android:background="@drawable/border_count"
+                android:text="999"
+                android:textColor="#000" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aa"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>
